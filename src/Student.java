@@ -35,18 +35,17 @@ import java.util.*;
 	 public void sendResponses(Question questionChoice){
 		 if (questionChoice.isSingleChoice()){
 				responses = new ArrayList<String>(questionChoice.getResponses());
+				//Serve to randomize answers, and only provide one answer
 				Collections.shuffle(responses);
 				responses.remove(0);
 			 mapResponses.put(getID(), responses);
 		 }
 		 else{
 			 responses = new ArrayList<String>(questionChoice.getResponses());
+			 //Serves to randomize answers and amount of answers
 				Collections.shuffle(responses);				
-			// Random rd = new Random();
-			 //for (int i = 0; i < rd.nextInt(responses.size()) -1; i ++ ){
 				int removeRandom;
-				removeRandom = (int)(new Random().nextInt(responses.size()) - 1);
-				
+				removeRandom = (int)(new Random().nextInt(responses.size()) - 1);				
 				for (int i = 0; i < removeRandom; i++) {
 				 responses.remove(i);
 			 }
