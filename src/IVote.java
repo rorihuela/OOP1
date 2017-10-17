@@ -20,10 +20,11 @@ class IVote {
 
 
 		// increments each time that option was chosen
-		for (int i = 1; i <= Student.getMap().size(); i++) {
-			if (Student.getMap().get(i) == (yL)) {
+		for (int i = 0; i <= Student.getMap().size()-1; i++) {
+			System.out.println(Student.getMap().get(i));
+			if (Student.getMap().get(i).equals(yL)) {
 				yes++;
-			} else if (Student.getMap().get(i) == (nL)) {
+			} else if (Student.getMap().get(i).equals(nL)) {
 				no++;
 		}
 		// Print out Results when done iterating through responses
@@ -39,32 +40,32 @@ class IVote {
 
 		// Options
 		ArrayList<String> aL = new ArrayList<String>();
-		aL.add("A");
+		aL.add("CS 140");
 
 		ArrayList<String> bL = new ArrayList<String>();
-		bL.add("B");
+		bL.add("CS 241");
 
 		ArrayList<String> cL = new ArrayList<String>();
-		cL.add("C");
+		cL.add("CS 356");
 
 		ArrayList<String> dL = new ArrayList<String>();
-		dL.add("D");
+		dL.add("CS 365");
 
 		ArrayList<String> eL = new ArrayList<String>();
-		eL.add("E");
+		eL.add("CS 480");
 
 		// increments each time that option was chosen
-		for (int i = 1; i <= Student.getMap().size(); i++) {
+		for (int i = 0; i <= Student.getMap().size()-1; i++) {
 		
-			 if (Student.getMap().get(i) == (aL)) {
+			 if (Student.getMap().get(i).equals (aL)) {
 				a++;
-			} else if (Student.getMap().get(i) == (bL)) {
+			} else if (Student.getMap().get(i).equals (bL)) {
 				b++;
-			} else if (Student.getMap().get(i) == (cL)) {
+			} else if (Student.getMap().get(i).equals (cL)) {
 				c++;
-			} else if (Student.getMap().get(i) == (dL)) {
+			} else if (Student.getMap().get(i).equals (dL)) {
 				d++;
-			} else if (Student.getMap().get(i) == (eL)) {
+			} else if (Student.getMap().get(i).equals (eL)) {
 				e++;
 			}
 		}
