@@ -1,3 +1,4 @@
+
 //Reuben Orihuela
 //10/17/17
 //Project 1
@@ -29,10 +30,11 @@ public class SimulationDriver {
 		Question multi = new MultQuestion(multiQuestion, multiResponse);
 		Question questionType[] = new Question[2];
 		Question questionChoice;
-		questionType[0] = single; 
+		questionType[0] = single;
 		questionType[1] = multi;
-		questionChoice = questionType[userChoice];		
+		questionChoice = questionType[userChoice];
 
+		// Randomly generates size of classroom
 		Random rd = new Random();
 		int size = rd.nextInt(60);
 		Student student[] = new Student[size];
@@ -45,17 +47,15 @@ public class SimulationDriver {
 			student[i].sendResponses(questionChoice);
 			System.out.println("Student " + student[i].getID() + " responded: " + student[i].getResponses());
 		}
-		
-		//Creates iVote object (different behavior for double or singleQuestion)
+
+		// Creates iVote object (different behavior for double or
+		// singleQuestion)
 		IVote vote = new IVote();
 
 		System.out.println("\nTotal results:");
 		if (userChoice == 0)
-		vote.showData();
-		else 
-		vote.multiShowData();	
-		
-		
-
+			vote.showData();
+		else
+			vote.multiShowData();
 	}
 }
