@@ -1,3 +1,6 @@
+//Reuben Orihuela
+//CS 365
+//10/15/17
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +27,6 @@ class IVote {
 				no++;
 		}
 		// Print out Results when done iterating through responses
-		//if (Question.isSingleChoice()) {
 		}
 			System.out.println("Yes: " + yes);
 			System.out.println("No: " + no);
@@ -72,8 +74,6 @@ class IVote {
 			System.out.println("C: " + c);
 			System.out.println("D: " + d);
 			System.out.println("E: " + e);
-	//0	}
-
 	
 	}	
 }
